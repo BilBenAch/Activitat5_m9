@@ -50,7 +50,7 @@ public class Xifrar {
     public byte[] encryptData(byte[] data, PublicKey pub) {
         byte[] encryptedData = null;
         try {
-            Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS10Padding","SunJCE");
+            Cipher cipher = Cipher.getInstance("RSA");
             cipher.init(Cipher.ENCRYPT_MODE, pub);
             encryptedData =  cipher.doFinal(data);
         } catch (Exception  ex) {
